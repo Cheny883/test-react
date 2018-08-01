@@ -1,11 +1,10 @@
 $blue: blue;
+$red: red;
 #cyb{
-  color: $blue,
+  color: $red,
 }
-div{
-  $width: 250;
-  $height: 200;
-  width: #{$width}px;
-  height: #{$height}px;
-  background-image: url("../img/6.png");
+.del{
+  @extend #cyb;
+  $marginLeft: 10;
+  margin-left: #{$marginLeft}px;
 }

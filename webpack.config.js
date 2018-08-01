@@ -8,7 +8,7 @@ var website = {
 }
 module.exports = {
     entry: {
-        cyb: path.join(__dirname,'index.js'),
+        cyb: path.join(__dirname,'src','index.js'),
     },
     devtool: 'inline-source-map',
     output: {
@@ -28,6 +28,11 @@ module.exports = {
     ],
     module:{
         rules:[
+            {
+                test: /\.(js|jsx)?$/,
+                exclude:/(node_modules)/,
+                loader:'babel-loader'
+            },
             {
                 test:/\.scss$/,
                 use: ExtractTextPlugin.extract({

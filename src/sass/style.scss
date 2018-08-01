@@ -1,0 +1,11 @@
+$blue: blue;
+#cyb{
+  color: $blue,
+}
+div{
+  $width: 250;
+  $height: 200;
+  width: #{$width}px;
+  height: #{$height}px;
+  background-image: url("../img/6.png");
+}
